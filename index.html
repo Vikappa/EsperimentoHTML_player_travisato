@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentativo player travisato
+        <!-- 
+            Esperimento di riproduzione con player travisato
+
+            In questa pagina farò delle prove per vedere se HTML 5 renderizza dei webplayer per dei file
+            dando come attributo il risultato che vogliamo ottenere invece che gli attributi corretti
+
+         -->
+    </title>
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            Player travisato v1
+        </h1>
+    </header>
+
+    <body>
+
+        <!-- 
+            Tentativo 1:
+            File audio e player video
+            Risultato: il browser imposta la riproduzione di un video ma non riesce a riprodurre nessun fotogramma 
+            quindi non parte nemmeno l'audio
+         -->
+        <div>
+            <video width="640" height="360" controls>
+                <source src="./Dark Epic.mp3" type="video/mp3">
+                Il tuo browser non supporta il tag video.
+            </video>
+        </div>
+
+        <!-- 
+            Tentativo 2:
+            File video e player audio
+            Risultato: funziona, il browser prende solo la traccia audio dal file audio/video
+         -->
+        <div>
+            <audio controls>
+                <source src="./Dark Epic.mp4" type="audio/mp4">
+                Il tuo browser non supporta il tag audio.
+            </audio>
+        </div>
+
+    </body>
+
+</body>
+
+</html>
